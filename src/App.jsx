@@ -7,6 +7,8 @@ import  EventDill  from './Event';
 import Count from './Count';
 import FetchData from './FetchData';
 import { Suspense } from 'react';
+import Countries from './component/countries/countries';
+
 
 function App() {
 
@@ -18,9 +20,17 @@ function App() {
     borderRadius: '8px',
   }
 
+
+  const listofcountries = fetch('https://restcountries.com/v3.1/all?fields=name,cca2,cca3,capital,region,flags')
+  .then(res => res.json())
+
   return (
     <>
       <h1>My React App</h1>
+
+        <Suspense fallback={<p>Loading to Countries............</p>}>
+           <Countries listofcountries={listofcountries}></Countries>
+        </Suspense>
 
         <Suspense fallback={<p>Loading............</p>}>
            <FetchData></FetchData>

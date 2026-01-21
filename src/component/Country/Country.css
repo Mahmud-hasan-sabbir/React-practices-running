@@ -1,0 +1,44 @@
+.design {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.design:hover {
+  transform: scale(1.05);
+}
+
+.flagStyle {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.visitBtn{
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.visitBtn:hover{
+  background-color: #084298;
+}
+
+.handleback{
+
+ background-color: aquamarine;
+
+
+}
